@@ -1,141 +1,156 @@
-# GForceSpace Complete Reference - Key Concepts Explained
+# G-Force Space: Complete Reference - Key Concepts Explained
 
-> **Note:** This document provides an explanation of the key concepts typically covered in a GForceSpace reference, relating gravitational force and space physics to computational modeling and AI/ML applications.
-
----
-
-## 1. G-Force (Gravitational Force Equivalent)
-
-**G-force** measures acceleration relative to free-fall. 1g equals the standard gravitational acceleration at Earth's surface (~9.81 m/s^2). This is not a force in the Newtonian sense but rather a measure of the acceleration that produces a perception of weight.
-
-- **Standing on Earth:** 1g (upward normal force counteracting gravity)
-- **Free fall / orbit:** 0g (weightlessness - no contact force)
-- **Rocket launch:** 3-4g typical for crewed missions
-- **Fighter jet maneuvers:** up to 9g sustained
-
-### Relevance to AI/ML
-G-force sensor data (accelerometers) is a primary input for:
-- **Activity recognition models** - classifying human motion from wearable sensors
-- **Anomaly detection** - identifying harsh driving events, structural failures
-- **Time-series forecasting** - predicting vehicle/spacecraft dynamics
+> Based on the G-Force Space founding document prepared for Goncalo Esteves, March 2026.
 
 ---
 
-## 2. Orbital Mechanics Fundamentals
+## 1. The OODA Loop - The Intellectual Spine
 
-### Kepler's Laws
-1. **Law of Ellipses:** Planets orbit in ellipses with the star at one focus
-2. **Law of Equal Areas:** A line from planet to star sweeps equal areas in equal times
-3. **Law of Periods:** T^2 is proportional to a^3 (orbital period squared ~ semi-major axis cubed)
+The single most important concept in the entire G-Force Space platform. OODA stands for:
 
-### Key Orbital Parameters
-| Parameter | Symbol | Description |
-|-----------|--------|-------------|
-| Semi-major axis | a | Half the longest diameter of the ellipse |
-| Eccentricity | e | Shape of orbit (0 = circle, 1 = parabola) |
-| Inclination | i | Tilt relative to reference plane |
-| Period | T | Time for one complete orbit |
+- **Observe** - Collect raw space/satellite data (what the satellites see)
+- **Orient** - Apply a systems engineering lens to interpret that data
+- **Decide** - Determine what it means for real humans on the ground
+- **Act** - Train, prepare, and improve (bridging to GeForce performance programs)
 
-### The Two-Body Problem
-The gravitational interaction between two masses:
+This military decision-making framework (originally from fighter pilot John Boyd) serves triple duty:
+1. **Editorial framework** - structures every episode
+2. **Brand differentiator** - transforms "war news" into skill-building content
+3. **Monetization bridge** - connects free space intelligence content to paid GeForce human performance training
+
+---
+
+## 2. Brand Voice Principles
+
+G-Force Space is NOT a news channel. It is a **space intelligence platform**. Five core principles govern all content:
+
+| Principle | Meaning |
+|-----------|---------|
+| **Truth Without Weaponization** | Show data honestly, never celebrate destruction. The satellite is an "honest witness" |
+| **Engineer's Precision, Human's Heart** | Rigorous analysis delivered with empathy, not cold detachment |
+| **Space for Good** | Every episode redirects: this tech could track famine, refugees, climate - not just war |
+| **Naive and Proud** | Openly believing space should teach us to do good on Earth is the mission, not a weakness |
+| **No Sides, No Regimes** | Opposition to systems that harm innocents, never against any people or nation |
+
+---
+
+## 3. Space Data Intelligence Stack (5 Tiers)
+
+The document catalogs a complete toolkit of satellite and geospatial data sources organized by cost and accessibility:
+
+### Tier 1: Free, Open, Daily (Core Operations)
+- **NASA FIRMS** - Real-time fire/thermal anomaly detection. First thing checked every morning. Detects strikes, explosions, burning infrastructure
+- **NASA Earthdata / Worldview** - 1,200+ imagery layers, many updated within 3 hours of satellite pass. Primary daily data pull
+- **Copernicus / Sentinel (ESA)** - SAR radar that sees through clouds (day/night), multispectral optical, atmospheric data. Weather-independent backup
+- **USGS Landsat Archive** - 40+ years of historical imagery for baseline comparison
+- **Google Earth Engine** - Cloud-based processing of massive datasets without downloading. Runs change detection algorithms
+- **NOAA / GOES** - Weather overlay to explain gaps in optical imagery
+
+### Tier 2: Freemium / Low Cost
+- **ACLED** - Ground truth conflict event database (who, what, where, when, how many casualties)
+- **Sentinel Hub** - Cleaner API to Sentinel data (~$25/month)
+- **OpenStreetMap** - Building footprints, roads, infrastructure labels for geographic context
+- **CSIS Missile Threat Database** - Known military assets mapped as GeoJSON overlay
+
+### Tier 3: Paid Commercial (When Revenue Begins)
+- **Planet Labs** (3-5m, ~$150-500/mo) - Daily passes, damage assessment
+- **Maxar** (30cm) - Ultra high-res confirmation of specific sites
+- **ICEYE** (sub-1m SAR) - All-weather persistent monitoring
+
+### Tier 4: ArcGIS / Esri
+Professional GIS platform for visualization, spatial analysis, and dashboard creation.
+
+### Tier 5: Conflict Intelligence (OSINT)
+- Bellingcat, OSINT analysts on X, UN OCHA humanitarian data, FlightRadar24, MarineTraffic
+
+---
+
+## 4. The 6-Agent Architecture (Claude Code)
+
+The core automation system. The founder spends only **15 minutes reviewing + 10 minutes recording**. Everything else is automated by 6 AI agents:
 
 ```
-F = G * m1 * m2 / r^2
+6:00 AM  [Scout]           -> Flagged coordinates (FIRMS, ACLED, FlightRadar24)
+6:15 AM  [Change Detector]  -> Before/after imagery, change scores 0-100
+6:30 AM  [Context Linker]   -> Site identification, strategic significance
+6:45 AM  [OODA Bridge]      -> Human impact analysis ("so what for you")
+7:00 AM  [Narrator]         -> Complete episode script + social posts
+7:15 AM  [YOU]              -> Review, approve, record voice
+Post     [Distributor]      -> Scheduled push to YouTube, Substack, social
 ```
 
-Where G = 6.674 x 10^-11 N(m/kg)^2 is the gravitational constant.
+### Key Agent Details
+
+**Agent 1 - The Scout:** Simple Python + cron job. Calls NASA FIRMS and ACLED APIs for a defined geographic bounding box (Iran: 24N-40N, 44E-64E). No ML needed.
+
+**Agent 2 - Change Detector:** Most complex agent. Uses Google Earth Engine Python API to run pixel-level diffs between current imagery and 30-day baselines. Generates before/after image pairs.
+
+**Agent 3 - Context Linker:** Queries CSIS, OpenStreetMap, ACLED, Wikipedia to answer "what is this site and why does it matter?"
+
+**Agent 4 - OODA Bridge:** The unique intellectual layer. Translates conflict observations into human preparedness insights. Example: strait blockade -> oil disruption -> civilian energy costs -> astronaut training principles for managing scarcity.
+
+**Agent 5 - The Narrator:** Claude Sonnet with brand voice encoded in system prompt. Produces 90-second scripts, social posts, YouTube descriptions.
+
+**Agent 6 - The Distributor:** Post-approval automation via Buffer API, ConvertKit, YouTube Data API.
 
 ---
 
-## 3. Space Environment Modeling
+## 5. Build Sequence (Phased Approach)
 
-### Gravitational Fields
-- **Uniform field approximation:** valid near Earth's surface
-- **Inverse-square field:** accurate for point masses and spherical bodies
-- **Multipole expansion:** accounts for non-spherical mass distributions (e.g., Earth's oblateness J2 perturbation)
+The document prescribes a deliberate build order, each step usable before the next:
 
-### Perturbation Forces
-Real spacecraft experience forces beyond simple two-body gravity:
-- Atmospheric drag (low Earth orbit)
-- Solar radiation pressure
-- Third-body effects (Moon, Sun, Jupiter)
-- Magnetic field interactions
+| Phase | What to Build | Time | Cost |
+|-------|--------------|------|------|
+| **Week 1** | Scout Agent only (FIRMS + ACLED -> email brief) | Half day | Free |
+| **Week 2** | Add Context Linker (skip Change Detector - needs GEE setup) | Days | Free |
+| **Week 3** | Add OODA Bridge + Narrator (Claude-powered agents) | Days | API costs |
+| **Month 2** | Add Change Detector (Google Earth Engine) | Week | Free |
+| **Month 3** | Add commercial satellite data (Planet Labs) | Ongoing | $150-500/mo |
 
----
-
-## 4. Computational Approaches
-
-### Numerical Integration Methods
-Simulating orbital trajectories requires solving ordinary differential equations (ODEs):
-
-- **Euler method:** Simple but inaccurate for orbital mechanics (energy drift)
-- **Runge-Kutta (RK4):** Fourth-order accuracy, good general-purpose choice
-- **Verlet integration:** Symplectic, conserves energy over long simulations
-- **Dormand-Prince (RK45):** Adaptive step-size, used in production solvers
-
-### N-Body Simulation
-Scaling from 2-body to N-body problems:
-- Direct summation: O(N^2) - feasible for small N
-- Barnes-Hut tree: O(N log N) - groups distant particles
-- Fast Multipole Method: O(N) - hierarchical expansion
+**First sprint = one Python script:** call FIRMS API + ACLED API -> format as plain text -> email at 7 AM. Two APIs, one script, one email.
 
 ---
 
-## 5. Machine Learning Applications in Space Physics
+## 6. Monetization Funnel
 
-### Physics-Informed Neural Networks (PINNs)
-Neural networks constrained by physical laws (conservation of energy, momentum):
-- Embed differential equations as loss terms
-- Require less training data than pure data-driven approaches
-- Naturally respect conservation laws
+The business model bridges free space content to paid performance training:
 
-### Surrogate Models
-Train ML models to approximate expensive physics simulations:
-- **Input:** orbital parameters, initial conditions
-- **Output:** predicted trajectories, fuel consumption, encounter times
-- Orders of magnitude faster than full numerical integration
+```
+Free content (YouTube/Substack)
+  -> Audience develops "OODA skill" feeling
+    -> Paid morning brief ($9/mo Substack)
+      -> Sponsorships ($2-5K/mo by month 4)
+        -> GeForce training programs ($297 webinar -> $5-15K full program)
+```
 
-### Sensor Fusion
-Combining accelerometer (g-force), gyroscope, and magnetometer data:
-- Kalman filters for state estimation
-- Deep learning for complex, nonlinear sensor fusion
-- Applications: spacecraft attitude determination, autonomous navigation
+**The critical bridge statement:**
+> "G-Force Space shows you how to observe the world like a systems engineer. GeForce teaches you to act on it like an astronaut. The observation without the action is just news. The action without the observation is just training. Together, it's the complete system."
 
 ---
 
-## 6. Reference Frames and Coordinate Systems
+## 7. What Only the Human Does
 
-Understanding reference frames is essential for interpreting forces and motion:
+The architecture is designed so the founder's irreplaceable contributions are:
+1. **Review** the morning brief (15 min)
+2. **Record** voice/video (10 min)
+3. **Make ethical judgment calls** on framing
+4. **Be the face** on camera
+5. **Maintain** astronaut network relationships
 
-| Frame | Use Case |
-|-------|----------|
-| Earth-Centered Inertial (ECI) | Satellite orbit propagation |
-| Earth-Centered Earth-Fixed (ECEF) | Ground station positions |
-| Body-fixed | Spacecraft attitude dynamics |
-| Local Vertical Local Horizontal (LVLH) | Relative motion, rendezvous |
-
-Transformations between frames use rotation matrices and quaternions (avoiding gimbal lock).
+Everything else is automated.
 
 ---
 
-## 7. Key Equations Summary
+## 8. Editorial Filter
 
-| Concept | Equation | Notes |
-|---------|----------|-------|
-| Newton's Law of Gravitation | F = Gm1m2/r^2 | Fundamental force law |
-| Orbital velocity (circular) | v = sqrt(GM/r) | Speed for circular orbit |
-| Escape velocity | v_esc = sqrt(2GM/r) | Minimum speed to escape |
-| Vis-viva equation | v^2 = GM(2/r - 1/a) | Energy conservation in orbits |
-| Tsiolkovsky rocket equation | dv = v_e * ln(m0/mf) | Relates fuel to velocity change |
+One question gates all publishing:
+
+> "Does this help someone understand the world better so they can prepare for a better future?"
+
+If yes -> ship it. If "this is just war coverage for clicks" -> reframe it.
 
 ---
 
 ## Summary
 
-The GForceSpace reference bridges classical mechanics (gravitational forces, orbital dynamics) with modern computational techniques (numerical simulation, ML/AI). Key takeaways:
-
-1. **G-force** is a measurable quantity central to sensor-based ML applications
-2. **Orbital mechanics** provides a rich domain for physics-informed modeling
-3. **Numerical methods** are essential for simulating gravitational systems
-4. **ML techniques** (PINNs, surrogate models, sensor fusion) accelerate and augment traditional physics computation
-5. **Reference frames** and coordinate transformations are foundational for correctly interpreting space dynamics data
+G-Force Space is a **space data intelligence platform** that uses free/commercial satellite data, automated AI agents (Claude Code), and the OODA decision framework to produce daily conflict analysis content. It differentiates through a "space for good" ethical stance and bridges to revenue via the GeForce human performance training system. The entire system is designed so one person can run it with 25 minutes of daily effort.
