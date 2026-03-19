@@ -5,9 +5,9 @@ _Updated: 2 Jun 2025_
 
 | Task | Status |
 |------|--------|
-| Install Python 3.12, Conda, Git, VS Code | ⬜ |
+| Install Python 3.12, Conda, Git, VS Code | ✅ |
 | Spin up a GPU instance & run “Hello CUDA” | ⬜ |
-| Create private/public repo + Project board | ⬜ |
+| Create private/public repo + Project board | ✅ |
 | Set up Obsidian vault “AI Flight Log” & Zotero | ⬜ |
 | Commit dummy notebook `notebooks/hello_gpu.ipynb` | ⬜ |
 
